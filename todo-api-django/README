@@ -1,0 +1,29 @@
+Django Rest Framework (DRF)
+Es un framework de desarrollo web para Django que permite construir APIs RESTful de forma rápida y sencilla.
+
+Pasos para crear un proyecto con DRF
+Crear un entorno virtual con Python
+virtualenv env
+Activar el entorno virtual
+MacOS/Linux
+
+source env/bin/activate
+Windows
+
+env\Scripts\activate
+Instalar Django
+pip install django
+Crear un proyecto con Django
+django-admin startproject todoapi .
+Instalar Django Rest Framework
+pip install djangorestframework
+Creamos una aplicación
+python manage.py startapp tasks
+Agregamos la aplicación a nuestro proyecto y tambien agregamos el framework de DRF
+|- settings.py
+
+INSTALLED_APPS = [
+    ...,
+    'rest_framework',
+    'tasks.apps.TasksConfig',
+]
